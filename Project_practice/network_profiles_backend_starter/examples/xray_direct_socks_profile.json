@@ -1,0 +1,30 @@
+{
+  "name": "Local SOCKS demo",
+  "host": "127.0.0.1",
+  "port": 10808,
+  "protocol": "socks",
+  "description": "Local SOCKS inbound with direct outbound for Xray wrapper demonstration",
+  "config": {
+    "log": {
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks-in",
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "udp": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      }
+    ]
+  }
+}

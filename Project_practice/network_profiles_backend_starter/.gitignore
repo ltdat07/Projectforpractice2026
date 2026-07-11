@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+profiles.db
+test_profiles.db
+.env
+runtime/configs/*.json
+runtime/logs/*.log
+!runtime/configs/.gitkeep
+!runtime/logs/.gitkeep
+
+xray/*
+!xray/.gitkeep
+!xray/README.txt
